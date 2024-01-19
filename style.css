@@ -1,9 +1,41 @@
 body {
-  background-color: darkblue;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
-h1 {
-  color: black;
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 10px;
 }
+
+/* Navigation menu styling */
+nav {
+    background-color: #111;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 button {
   background-color: black;
   color: white;
