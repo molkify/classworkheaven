@@ -39,10 +39,10 @@ footer {
 button {
   background-color: black;
   color: white;
-  border-radius: 5px;
+  border-radius: 30px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
-  font-family: monospace;
+  font-family: Arial, sans-serif;
   font-size: medium;
 }
