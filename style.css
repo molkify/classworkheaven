@@ -2,7 +2,7 @@ body {
   background-color: darkblue;
 }
 h1 {
-  color: red;
+  color: black;
 }
 button {
   background-color: black;
@@ -11,6 +11,6 @@ button {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
-  font-family: https://fonts.google.com/specimen/Source+Code+Pro;
+  font-family: monospace;
   font-size: medium;
 }
