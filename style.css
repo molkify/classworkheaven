@@ -40,9 +40,9 @@ button {
   background-color: black;
   color: white;
   border-radius: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
   font-family: Arial, sans-serif;
   font-size: medium;
 }
