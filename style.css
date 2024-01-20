@@ -39,10 +39,15 @@ footer {
 button {
   background-color: black;
   color: white;
-  border-radius: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: Arial, sans-serif;
-  font-size: medium;
+  font-size: large;
 }
+button:hover {
+ background-color: darkgrey;
+}
+
