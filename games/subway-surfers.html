@@ -1,1 +1,252 @@
+<html lang="en" style="font-size: 10px;font-family: Roboto, Arial, sans-serif;"><head>
+    <title>Subway Surfers Zurich</title>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+    <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true,IE=Edge,chrome=1">
+    <meta http-equiv="Content-Language" content="en-US">
+    <meta property="og:type" content="game">
+        <style>
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
 
+        #game, ruffle-player {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background: rgba(0, 0, 0, 0.2);
+            margin:0;
+            padding:0;
+        }
+        .fl-wrap{
+            z-index: 100!important
+        }
+        object {
+            height: 100vh;
+            width: 100vw
+        }
+        #missing-flash {
+            display: none;
+            text-align: center
+        }
+
+        .fl-wrap {
+            margin: 0 auto;
+            background-color: #FFF;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center
+        }
+
+        .fl-content {
+            color: #fff
+        }
+
+        .fl-game {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            height: 95%;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center
+        }
+
+        .fl-game a {
+            position: absolute;
+            z-index: 9999;
+            text-decoration: none
+        }
+
+        .fl-game span {
+            color: #FFF;
+            background-color: #3281ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase
+        }
+
+        .fl-game span:hover {
+            background-color: #009cff
+        }
+
+        .missing-flash-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: blur(0.8em);
+            filter: blur(0.8em);
+            opacity: .25
+        }
+
+        .loading-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1
+        }
+
+        .loading-box-2 {
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center
+        }
+
+        .loading-box-3 {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        .progress-bar {
+            height: 30px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            transition: all .3s
+        }
+
+        .fl-o1 {
+            background-color: #002b50;
+            width: 100%;
+            z-index: 2
+        }
+
+        .fl-o2 {
+            background-color: #009cff;
+            width: 0;
+            z-index: 3
+        }
+    </style>
+
+</head>
+<body id="tbody">
+
+
+<div id="game" style="visibility: visible; opacity: 1;">
+        <iframe src="//files.ufreegame.net/1024/Subway-Surfers-Zurich/" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" webkit-playsinline="true" scrolling="no" style="width:100vw;height:100vh"></iframe>
+    </div>
+
+<script>
+    var PRELOAD = (function (doc) {
+        var TIMER, COUNTER, TOTAL_STEP, AMOUNT;
+        COUNTER = 0;
+        AMOUNT = 0;
+        TOTAL_STEP = 0;
+
+        var config = {
+            time: 2,
+            stepPerSecond: 20,
+            bgCorver: "#002b50",
+            bgMain: "#009cff",
+            done: function () {
+                console.log("Preload completed.")
+            }
+        };
+
+        function findOne(str) {
+            return doc.querySelector(str);
+        }
+
+        function setBackgroundProcess() {
+            var cover, main;
+            cover = findOne(".fl-o1");
+            main = findOne(".fl-o2");
+            if (cover)
+                cover.style.backgroundColor = config.bgCorver;
+            if (main)
+                main.style.backgroundColor = config.bgMain;
+        }
+
+        function updatePreload(percent) {
+            var main, h1;
+            main = findOne(".fl-o2");
+            h1 = findOne("h2");
+            if (main) {
+                main.style.width = percent + "%";
+                h1.innerHTML = parseInt(percent) + "%";
+            }
+        }
+
+        function init(option) {
+            config = Object.assign(config, option);
+            setBackgroundProcess();
+            TOTAL_STEP = config.time * config.stepPerSecond;
+            AMOUNT = 100 / TOTAL_STEP;
+        }
+
+        function loop() {
+            if (++COUNTER > TOTAL_STEP) {
+                clearTimeout(TIMER);
+                config.done();
+                return;
+            }
+            updatePreload(COUNTER * AMOUNT);
+            TIMER = setTimeout(loop, 1e3 / config.stepPerSecond);
+        }
+
+        return {
+            init: function (option) {
+                init(option);
+            },
+            run: function () {
+                loop();
+            }
+        };
+    })(document);
+</script>
+<!--check flash-->
+<script>
+
+    window.onload = function () {
+        document.getElementById("loading").style.display = "block";
+        PRELOAD.init({
+            time: 2,
+            stepPerSecond: 20,
+            done: function () {
+                var ax, ay;
+                ax = document.querySelector("#game");
+                ay = document.querySelector("#loading");
+
+                ay.parentNode.removeChild(ay);
+                ax.style.visibility = "visible";
+                ax.style.opacity = "1";
+            }
+        });
+        PRELOAD.run();
+    }
+</script>
+
+
+
+
+
+</body></html>
