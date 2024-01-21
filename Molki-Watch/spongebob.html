@@ -1,0 +1,34 @@
+<html><head><base target="_blank"></head><body>
+<select id="episodeselector"><option value="0">Episode 0</option><option value="1">Episode 1</option><option value="2">Episode 2</option><option value="3">Episode 3</option><option value="4">Episode 4</option><option value="5">Episode 5</option><option value="6">Episode 6</option><option value="7">Episode 7</option><option value="8">Episode 8</option><option value="9">Episode 9</option><option value="10">Episode 10</option><option value="11">Episode 11</option><option value="12">Episode 12</option><option value="13">Episode 13</option><option value="14">Episode 14</option><option value="15">Episode 15</option><option value="16">Episode 16</option><option value="17">Episode 17</option><option value="18">Episode 18</option><option value="19">Episode 19</option><option value="20">Episode 20</option><option value="21">Episode 21</option><option value="22">Episode 22</option><option value="23">Episode 23</option><option value="24">Episode 24</option><option value="25">Episode 25</option><option value="26">Episode 26</option><option value="27">Episode 27</option></select>
+
+<iframe width="905" height="365" src=""></iframe>
+ 
+
+<script>
+let currentvideo = document.querySelector('iframe');
+let selector = document.getElementById("episodeselector");
+for (let i = 0; i < 28; i++) {
+let option = new Option("Episode " + i, i)
+selector.add(option, undefined)
+}
+
+selector.onchange = function(){
+	if(currentvideo.src != "") {
+  	currentvideo.src = "";
+  }
+  currentvideo.src = "https://serve.hamburgerham.com/movie/spongebob/s1/e" + selector.options[selector.selectedIndex].value + ".mp4";
+  console.log(currentvideo.src)
+}
+</script>
+
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'c73feb817e4d657ce2ec0ed5ff2cbff1',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<script type="text/javascript" src="http' + (location.protocol === '' ? 's' : '') + '"></scr' + 'ipt>');
+</script><iframe allowtransparency="true" scrolling="no" frameborder="0" framespacing="0" width="728" height="90" src="about:blank"></iframe>\</body></html>
