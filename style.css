@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
 
 body {
-    background-color: #000
-    color: #000;
-    font-family: "Poppins", serif;
+    background-color: #000;
+    color: #fff;
+    font-family: "Poppins", serif
 }
 
 /* Header styling */
@@ -37,6 +37,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Additional styles for specific elements can be added as needed */
 
 button {
   background-color: #000;
