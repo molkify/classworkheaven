@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
-@keyframes loadInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
 
 body {
     background-color: #01223e;
@@ -58,7 +50,7 @@ button {
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", serif;
   font-size: large;
 }
 button:hover {
