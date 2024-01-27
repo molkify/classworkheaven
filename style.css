@@ -1,46 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
 
-body {
-    background-color: #01223e;
-    color: #fff;
-    font-family: "Poppins", serif
+body[theme=dark] {
+    --inputbg: #333333;
+    --inputborder: #444444;
+    --uibg: #242424;
+    --textcolor: #fff;
+    --bg: #0c0c0c;
 }
-/* Header styling */
-header {
-    background-color: #001a33;
-    color: #fff;
-    padding: 10px;
-}
-
-/* Navigation menu styling */
-nav {
-    background-color: #001a33;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-}
-
-/* Main content styling */
-main {
-    padding: 20px;
-}
-
-/* Footer styling */
-footer {
-    background-color: #001a33;
-    color: #01223e;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Additional styles for specific elements can be added as needed */
-
 
 button {
   background-color: #000;
