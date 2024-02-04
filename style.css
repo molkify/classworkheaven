@@ -52,4 +52,7 @@ button {
 button:hover {
  background-color: grey;
 }
-
+text {
+background-color: white;
+color: white;
+}
