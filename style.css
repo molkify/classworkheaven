@@ -32,15 +32,15 @@ iframe {
 }
 
 button {
-     background-color: #000;
-      border-radius: 5px;
-  padding-left: 30px
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-    color: white;
-   font-family: "Poppins", serif;
-   font-size: large;
+  font-family: "Poppins", serif;
+  font-size: large;
 }
 button:hover {
        background-color: grey;
