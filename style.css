@@ -25,6 +25,10 @@ nav {
   margin: auto;
 }
 
+nav > h1 {
+    color: white;
+}
+
 a {
   color: white;
 }
