@@ -9,12 +9,20 @@ body {
    font-family: "Lexend", serif;
 }
 
-header {
-left: 0;
-        right: 0;
-        background-color: #000;
-        font-size: medium;
-        padding: 0.5rem 0.75rem;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px) saturate(200%) brightness(70%);
+  color: #000;
+  display: flex;
+  height: 7vw;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  padding: 0 1%;
+  z-index: 5;
+  margin: auto;
 }
 
 a {
