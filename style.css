@@ -28,6 +28,7 @@ nav {
 .nav-links {
    cursor: pointer;
    margin-right: 15px;
+   margin-left: 10px;
 }
 
 a {
